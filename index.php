@@ -147,6 +147,8 @@ if (empty($q)) {
 <li><a class="ajax-link" href="https://github.com/userink/Fatestars-Authorization-System">命运星辰授权系统</a></li>
 </ul>
 </li>
+<li class="link menu-timeline">
+<a href="https://github.com/userink/Fatestars-Guide-Page"><span data-hover="本项目地址">本项目地址</span></a></li>
 
 <li class="link menu-timeline"><a class="ajax-link" href="#">
 <span data-hover="Contact">关于我</span></a></li>
