@@ -1,12 +1,4 @@
 <?php
-// +----------------------------------------------------------------------
-// | Personal quotes [ 大海终将波涛汹涌，世界定会因我动荡！]
-// +----------------------------------------------------------------------
-// | By: 命运星辰  <1594800175@qq.com>
-// +----------------------------------------------------------------------
-// | Date: 2021年8月1日
-// +----------------------------------------------------------------------
-
 //禁用错误报告
 error_reporting(0);
 $t=htmlspecialchars($_GET["t"]);
@@ -42,7 +34,7 @@ if (empty($q)) {
   <meta name="x5-page-mode" content="app"><!--QQ应用模式-->
   <title>命运星辰——全球首屈一指的引导页</title>
   <meta name="description" content="命运星辰官方网络站点，命运星辰免费php加密，命运星辰授权站点，命运星辰商城程序，国内首屈一指的技术网站!" />
-  <meta name="keywords" content="命运星辰商城系统,命运星辰商城,fatestars系统,命运星辰授权系统,商城系统,代刷网,代刷网源码,程序,命运星辰,命运星辰官网,命运星辰网络,命运星辰网络科技,fatestars,命运星辰工作室,免费php加密,php加密,sg11加密,sg11,xend加密,xend" />
+  <meta name="keywords" content="命运星辰商城系统,命运星辰商城,命运星辰授权系统,命运星辰,命运星辰官网,命运星辰网络,命运星辰网络科技,fatestars,命运星辰工作室,免费php加密" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="author" content="前端爱好者命运星辰" /> 
   <link href="assets/main/css/style.css?t=<?php echo date("ymdhi"); ?>" rel="stylesheet">
@@ -144,12 +136,9 @@ if (empty($q)) {
 
 <li class="link menu-timeline"><a class="ajax-link" href=""><span data-hover="Contact">旗下项目</span></a>
 <ul>
-<li><a class="ajax-link" href="https://github.com/userink/Fatestars-Authorization-System">命运星辰授权系统</a></li>
-<li><a class="ajax-link" href="https://github.com/userink/Fatestars-Guide-Page">命运星辰导航系统</a></li>
+<li><a class="ajax-link" href="http://verify.fatestars.com/">命运星辰授权系统</a></li>
 </ul>
 </li>
-<li class="link menu-timeline">
-<a href="https://github.com/userink/Fatestars-Guide-Page"><span data-hover="本项目地址">本项目地址</span></a></li>
 
 <li class="link menu-timeline"><a class="ajax-link" href="#">
 <span data-hover="Contact">关于我</span></a></li>
@@ -271,7 +260,7 @@ if (empty($q)) {
 </div>
 <div id="content">
         <div class="con">
-            <div class="shlogo" style="background: url(assets/main/icon/logo.png) no-repeat center/cover;background-size:60% ; "></div>
+            <a onclick="kaishi()">  <div class="shlogo" style="background: url(assets/main/icon/logo.png) no-repeat center/cover;background-size:60% ; "></div>
             <div class="sou"> 
                 <form action="" method="post" target="_self">  
                    <?php 
@@ -408,6 +397,104 @@ WIDGET = {
   }
 }
 </script>
+<script>
+function kaishi()  
+    {  
+  
+  
+        var docElm = document.documentElement;  
+        //W3C   
+        if (docElm.requestFullscreen) {  
+            docElm.requestFullscreen();  
+        }  
+            //FireFox   
+        else if (docElm.mozRequestFullScreen) {  
+            docElm.mozRequestFullScreen();  
+        }  
+            //Chrome等   
+        else if (docElm.webkitRequestFullScreen) {  
+            docElm.webkitRequestFullScreen();  
+        }  
+            //IE11   
+        else if (elem.msRequestFullscreen) {  
+            elem.msRequestFullscreen();  
+        }  
+    }  
+  
+    function guanbi() {  
+  
+  
+        if (document.exitFullscreen) {  
+            document.exitFullscreen();  
+        }  
+        else if (document.mozCancelFullScreen) {  
+            document.mozCancelFullScreen();  
+        }  
+        else if (document.webkitCancelFullScreen) {  
+            document.webkitCancelFullScreen();  
+        }  
+        else if (document.msExitFullscreen) {  
+            document.msExitFullscreen();  
+        }  
+    }  
+  
+  
+  
+  
+    document.addEventListener("fullscreenchange", function () {  
+          
+        fullscreenState.innerHTML = (document.fullscreen) ? "" : "not ";  
+    }, false);  
+     
+  
+      
+    document.addEventListener("mozfullscreenchange", function () {  
+         
+        fullscreenState.innerHTML = (document.mozFullScreen) ? "" : "not ";  
+    }, false);  
+      
+  
+     
+    document.addEventListener("webkitfullscreenchange", function () {  
+          
+        fullscreenState.innerHTML = (document.webkitIsFullScreen) ? "" : "not ";  
+    }, false);  
+      
+    document.addEventListener("msfullscreenchange", function () {  
+          
+        fullscreenState.innerHTML = (document.msFullscreenElement) ? "" : "not ";  
+    }, false);  
+   
+</script> 
+<!-- 禁止F12代码 -->
+<script>
+function fuckyou(){
+ window.close(); //关闭当前窗口(防抽)
+ window.location="about:blank"; //将当前窗口跳转置空白页
+}
+ function ck() {
+ console.profile();
+ console.profileEnd();
+ //我们判断一下profiles里面有没有东西，如果有，肯定有人按F12了，没错！！
+ if(console.clear) { console.clear() };
+ if (typeof console.profiles =="object"){
+ return console.profiles.length > 0;
+ }
+}
+function hehe(){
+if( (window.console && (console.firebug || console.table && /firebug/i.test(console.table()) )) || (typeof opera == 'object' && typeof opera.postError == 'function' && console.profile.length > 0)){
+ fuckyou();
+}
+if(typeof console.profiles =="object"&&console.profiles.length > 0){
+fuckyou();
+}
+}
+hehe();
+window.onresize = function(){
+if((window.outerHeight-window.innerHeight)>200)
+//判断当前窗口内页高度和窗口高度，如果差值大于200，那么呵呵
+ fuckyou();
+}</script> 
 <script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script>
 
  </div>  
