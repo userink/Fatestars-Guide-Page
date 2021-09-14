@@ -1,5 +1,8 @@
 # Fatestars-Guide-Page
 Fatestars-Guide-Page
+# Fatestars-Guide-Page-Version
+- V1.0.0：基本功能
+- v1.0.1：新增全屏功能
 # Fatestars-Guide-Page-Demo
 - [Official demo](https://guide-page.demo.fatestars.com/)
 > Users are welcome to contact me to contribute to your website！
